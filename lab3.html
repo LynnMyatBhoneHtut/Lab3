@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Demonstrates some basic HTML form elements for course registration" />
+  <meta name="keywords" content="HTML, Form, Student, Registration" />
+  <meta name="author" content="Lynn Myat Bhone Htut" />
+  <title>Student Course Registration</title>
+</head>
+<body>
+<h1>Student Course Registration Page</h1>
+
+<form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+	<!-- Personal Details -->
+	<p><label for="student">Student&apos;s Name</label> 
+		<input type="text" name="student" id="student" required="required"/>
+	</p>
+	<p><label for="email">Email</label> 
+		<input type="email" name="email" id="email" required="required"/>
+	</p>
+
+	<fieldset>
+		<legend>Course Information</legend>
+		<p><label for="course">Select Course</label> 
+			<select name="course" id="course">
+				<option value="cos10026">COS10026 - Web Technology Project</option>
+				<option value="cos10005">COS10005 - Web Development</option>
+				<option value="cos20001">COS20001 - User-Centred Design</option>
+				<option value="cos30043">COS30043 - Interface Design &amp; Development</option>
+				<option value="cos60004">COS60004 - Creating Web Applications</option>
+			</select>
+		</p>
+
+		<p><label for="dob">Date of Birth</label> 
+			<input type="date" name="dob" id="dob" placeholder="dd-mm-yyyy"/>
+		</p>
+
+		<fieldset>
+			<legend>Study Mode</legend>
+			<p><label for="full">Full-Time</label> 
+				<input type="radio" id="full" name="mode" value="full-time"/>
+			</p>
+			<p><label for="part">Part-Time</label> 
+				<input type="radio" id="part" name="mode" value="part-time"/>
+			</p>
+		</fieldset>
+
+		<fieldset>
+			<legend>Preferred Learning Options</legend>
+			<p><label for="online">Online</label> 
+				<input type="checkbox" id="online" name="learning[]" value="online"/>
+			</p>
+			<p><label for="campus">On Campus</label> 
+				<input type="checkbox" id="campus" name="learning[]" value="campus" checked="checked"/>
+			</p>
+			<p><label for="hybrid">Hybrid</label> 
+				<input type="checkbox" id="hybrid" name="learning[]" value="hybrid"/>
+			</p>
+		</fieldset>
+
+		<p><label for="comments">Additional Notes</label>
+			<textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+		</p>
+	</fieldset>
+	  
+	<input type="submit" value="Register"/>
+	<input type="reset" value="Reset Form"/>
+</form>
+</body>
+</html>
